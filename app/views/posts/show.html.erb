@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag "application"%>
+
+<div class="all_users"> 
+    <h1>A particular post</h1>
+    <div class="user-container">
+            <div class="single-post">
+                    <div class ="single-post-top">
+                        <p>Post #<%= @post.id %> by: <%= @post.author.name %></p><br>
+                        <div class="single-post-top-content">
+                            <p>Comments: <%= @post.comments_counter %></p>,
+                            <p>Likes: <%= @post.likes_counter %></p><br>
+                        </div>
+                    </div>
+                <p><%= @post.text %></p><br>
+            </div>
+    </div>     
+</div>
+
+<div class="all-coments-in-posts-outer">
+    <% @post.display_comments.each do |comment| %>
+        <div class="all-coments-in-posts">
+                <p><%= comment.author.name %>: </p>
+                <p><%= comment.text %></p>  
+            </div>
+    <% end %>
+</div>

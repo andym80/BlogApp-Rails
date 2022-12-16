@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag "application"%>
+
+<div class="all_users"> 
+    <h1>Posts by a User</h1>
+    <div class="user-container">
+        <img src=" <%= @user.photo %>" alt="User profile" width="130" height="130"><br>
+            <div class="single-user">
+                <h2>User Name:  <%= @user.name %></h2><br>
+                <div class="single-user-insider">
+                 <p>No.of Posts: <%= @user.posts_counter %></p><br>
+                </div>
+            </div>
+    </div>    
+</div>
+<% @userposts.each do |post| %>
+    <div class="particular_user">
+        <h3>Post #<%= post.id %></h3><br>
+        <p><%= post.text %></p><br>
+        <div class="user-com-likes">
+            <p>Comments: <%= post.comments_counter %>, </p>
+            <p>Likes: <%= post.likes_counter %></p>
+            <%= form_with model: @like, url: "/users/#{@user.id}/posts/#{post.id}/likes" do |form| %>
+            <% form.submit "👍🏻" %>
+        <% end %>
+        </div>
+    </div> 
+    <div class="particular_user">
+     <%= post.display_comments.each do |comment| %> 
+        <p><%= comment.author.name %> : <%= comment.text %> </p>
+     <% end %>
+
+     <h3>Add a comment: </h3>
+        <%= form_with model: @comment, url: "/users/#{@user.id}/posts/#{post.id}/comments" do |form| %>
+            <%= form.text_area :text,  placeholder: "Add a comment" %>
+            <%= form.submit "submit" %>
+        <% end %>
+        </div>
+
+     </div>   
+<% end %>
