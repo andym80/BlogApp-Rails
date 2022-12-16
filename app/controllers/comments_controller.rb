@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
       flash[:success] = 'Comment created successfully'
       redirect_to "/users/#{@post.author.id}/posts/#{@post.id}"
     else
-      flash.now[:error] = 'Error: Comment could not be ccreated!!'
+      flash.now[:error] = 'Error: Comment could not be created!!'
       render :new
     end
   end
