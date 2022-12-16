@@ -190,6 +190,10 @@ Example:
 
 - GitHub: [@andym80](hhttps://github.com/andym80)
 
+👤 **Edith oga**
+
+- GitHub: [@vigehi](https://github.com/githubhandle)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
