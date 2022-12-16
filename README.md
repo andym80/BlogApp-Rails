@@ -124,7 +124,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-
+bundle install
 
 ```sh
  gem install rails
@@ -190,6 +190,10 @@ Example:
 
 - GitHub: [@andym80](hhttps://github.com/andym80)
 
+👤 **Edith oga**
+
+- GitHub: [@vigehi](https://github.com/githubhandle)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,7 +225,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project..
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
